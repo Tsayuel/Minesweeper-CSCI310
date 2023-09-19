@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" android:weightSum="1">
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timer: 0s"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_weight=".20"
+            />
+
+        <TextView
+            android:id="@+id/flagCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flags: 0"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_weight=".20"/>
+
+
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/actionPicker"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:rowCount="12"
+        app:columnCount="10">
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/actionPicker"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" android:weightSum="1"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/mineOrFlagView"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_weight=".50"
+            android:gravity="center"
+            app:srcCompat="@drawable/pickaxe" />
+
+        <Button
+            android:id="@+id/actionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight=".50"
+            android:gravity="center"
+            android:text="Mine" />
+
+
+    </LinearLayout>
+    
+</RelativeLayout>
